@@ -12,6 +12,9 @@ fun main(args: Array<String>) {
     var goldPieces = 50
     val drinks = listOf("mead", "wine", "LaCroix")
 
+    var playerNameReflected = playerName.reversed()
+
     println(playerName)
+    println(playerNameReflected)
     println(experiencePoints)
 }
