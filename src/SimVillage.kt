@@ -1,25 +1,12 @@
 fun main() {
-    val greetingFunction = { playerName: String, numBuildings: Int ->
+    runSimulation("Guyal") { playerName, numBuildings ->
         val currentYear = 2019
         println("Adding $numBuildings houses")
         "Welcome to SimVillage, $playerName! (copyright $currentYear)"
     }
+}
 
-    println(greetingFunction("Guyal", 2))
-
-//    println(greetingFunction)
-//    () -> kotlin.String
-
-
-    // itt Python kan een named function NIET als argument worden meegegeven aan andere functies!
-
-    fun myGreetingFunction() : String {
-        val currentYear = 2019
-        return "Welcome to SimVillage, Mayor! (copyright $currentYear)"
-    }
-
-    println(myGreetingFunction())
-
-//    println(myGreetingFunction)
-//    error: function invocation 'myGreetingFunction()' expected
+inline fun runSimulation(playerName: String, greetingFunction: (String, Int) -> String) {
+    val numBuildings = (1..3).shuffled().last() // randomly selects 1, 2, or 3
+    println(greetingFunction(playerName, numBuildings))
 }
