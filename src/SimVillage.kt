@@ -1,14 +1,17 @@
 fun main() {
-    val greetingFunction: () -> String = {
+    val greetingFunction = { playerName: String, numBuildings: Int ->
         val currentYear = 2019
-        "Welcome to SimVillage, Mayor! (copyright $currentYear)"
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
     }
 
-    println(greetingFunction())
+    println(greetingFunction("Guyal", 2))
 
 //    println(greetingFunction)
 //    () -> kotlin.String
 
+
+    // itt Python kan een named function NIET als argument worden meegegeven aan andere functies!
 
     fun myGreetingFunction() : String {
         val currentYear = 2019
