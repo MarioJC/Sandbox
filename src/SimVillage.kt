@@ -3,11 +3,11 @@ fun main() {
 }
 fun runSimulation() {
     val greetingFunction = configureGreetingFunction()
-    println(greetingFunction("Guyal"))
-    println(greetingFunction("Guyal"))
-    println(greetingFunction("Guyal"))
-    println(greetingFunction("Guyal"))
-    println(greetingFunction("Guyal"))
+    println(greetingFunction("Mario"))
+    println(greetingFunction("Mario"))
+    println(greetingFunction("Mario"))
+    println(greetingFunction("Mario"))
+    println(greetingFunction("Mario"))
 }
 
 fun configureGreetingFunction(): (String) -> String {
